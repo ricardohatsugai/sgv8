@@ -1,0 +1,26 @@
+{DONE -oRicardo -cTela de pesquisa : Construir tela que informa "Clientes que estão a X dias sem compra"
+
+select
+    c.codigo,
+    c.nomefantasia,
+    c.razaosocial
+from clientes c
+where  c.codigo not in (select p.codcliente
+                     from pedido p
+                     where p.data  between '01/01/2020' and '07/07/2021'
+                     group by p.codcliente)}
+{TODO -oRicardo -cTela de Cadastros : Confeccionar uma tela de cadastro e controle de planos de metas, campanhas e Rebates de metas.}
+{DONE -oRicardo -cTela de pesquisa : Fazer uma pesquisa de pedidos por Ordem de Compra do Cliente}
+{DONE -oRicardo -cTela de pesquisa : Fazer uma pesquisa de pedidos por número de pedido}
+{DONE -oRicardo -cTela de pesquisa : Fazer uma tela de pesquisa de pedidos de um Cliente por intervalo de tempo e Representada}
+{DONE -oRicardo -cTela de pesquisa : Fazer pesquisa de total de pedido de uma representada por intervalo de tempo e por representante.}
+{DONE -oRicardo -cTela de pesquisa : Pesquisa de Clientes por Cidade}
+{DONE -oRicardo -cTela de pesquisa :
+Próximo passo é fazer uma relatório de pesquisa de "produto x quem comprou este produto".
+Esta pesquisa o usuário dgitará um produto e o programa buscará em um intervalo de tempo, todos clientes
+que compraram este produto, com quantidade e valor da época.}
+{DONE -oRicardo -cFunções : Fazer o algoritmo da recalcular o pedido, do botão Recalcular.}
+{DONE -oRicardo -cTela de pesquisa :
+03/01/2018 - (À fazer) Próximo passo é fazer uma relatório de pesquisa de "produto x quem comprou este produto".
+Esta pesquisa o usuário dgitará um produto e o programa buscará em um intervalo de tempo, todos clientes
+que compraram este produto, com quantidade e valor da época.}

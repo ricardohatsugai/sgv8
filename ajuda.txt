@@ -1,0 +1,6 @@
+Como enviar arquivos para Github pelo terminal
+
+https://github.com/rik3500/SGV8.git
+
+Enviando arquivos para o Github depois das correções
+git push -u origin master
