@@ -3729,9 +3729,10 @@ object DM_ImpressaoDePedido: TDM_ImpressaoDePedido
       Size = 50
     end
     object FDQ_PedidoOBS: TStringField
+      DisplayLabel = 'Obs'
       FieldName = 'OBS'
       Origin = 'OBS'
-      Size = 400
+      Size = 800
     end
     object FDQ_PedidoCOD_FATURADO: TIntegerField
       FieldName = 'COD_FATURADO'

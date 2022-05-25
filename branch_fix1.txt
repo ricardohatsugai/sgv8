@@ -1,0 +1,8 @@
+Trindade, 25 de Maio de 2022.
+
+Branch fix:
+
+1 - Correção do tamanho do campo OBS da cópia do pedido.
+    Nesta correção foi criado um novo domain no Firebird, na tabela PEDIDOS, no campo OBS.
+    O campo estava com o domain de "nomes", que tinha a configuração de Varchar(400).
+    Foi criado um novo domain "Obs", que é Varchar(800).
