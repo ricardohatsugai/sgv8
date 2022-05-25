@@ -25,7 +25,6 @@ type
     FDQ_PedidoCODVENDEDOR: TIntegerField;
     FDQ_PedidoCOD_FRETE: TIntegerField;
     FDQ_PedidoFRETE: TStringField;
-    FDQ_PedidoOBS: TStringField;
     FDQ_PedidoCOD_FATURADO: TIntegerField;
     FDQ_PedidoFATURADO: TSmallintField;
     FDQ_PedidoTIPO: TStringField;
@@ -171,6 +170,7 @@ type
     FDQ_ItensCOD_DO_CLIENTE: TStringField;
     frxHTMLExport1: TfrxHTMLExport;
     frxJPEGExport1: TfrxJPEGExport;
+    FDQ_PedidoOBS: TStringField;
   private
     { Private declarations }
   public

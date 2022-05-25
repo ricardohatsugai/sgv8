@@ -164,7 +164,7 @@ object DM_Cadastro_de_Pedidos: TDM_Cadastro_de_Pedidos
       FieldName = 'OBS'
       Origin = 'OBS'
       ProviderFlags = [pfInUpdate]
-      Size = 400
+      Size = 800
     end
     object FDQ_PedidoCOD_FATURADO: TIntegerField
       DisplayLabel = 'C'#243'd. Faturado'
@@ -925,7 +925,7 @@ object DM_Cadastro_de_Pedidos: TDM_Cadastro_de_Pedidos
     object FDQ_Pedido_ReplicaOBS: TStringField
       FieldName = 'OBS'
       Origin = 'OBS'
-      Size = 400
+      Size = 800
     end
     object FDQ_Pedido_ReplicaCOD_FATURADO: TIntegerField
       FieldName = 'COD_FATURADO'
