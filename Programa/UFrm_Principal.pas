@@ -50,6 +50,7 @@ type
     Pedidospornmero1: TMenuItem;
     PedidosporOrdemdeCompra1: TMenuItem;
     Clientesqueestosemcomprapartirdeumadata1: TMenuItem;
+    SomaTotaldeProdutoVendidoporCliente1: TMenuItem;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Clientes1Click(Sender: TObject);
     procedure ToolButton1Click(Sender: TObject);
@@ -76,6 +77,7 @@ type
     procedure PedidosporOrdemdeCompra1Click(Sender: TObject);
     procedure ClientesporCidade1Click(Sender: TObject);
     procedure Clientesqueestosemcomprapartirdeumadata1Click(Sender: TObject);
+    procedure SomaTotaldeProdutoVendidoporCliente1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -91,6 +93,7 @@ type
     procedure PesquisaTotalDePedidosPorRepresentanteRepresentada_e_IntervaloDeDatas(Sender: TObject);
     procedure PesquisaPedidosPorNumero(Sender: TObject);
     procedure PesquisaPedidosPorOC(Sender: TObject);
+    procedure PesquisaSomaProdutosVendidosPorCliente(Sender: TObject);
   end;
 
 var
@@ -115,7 +118,8 @@ uses UFrm_ListaClientes, UDM_ListagemDeClientes, UDM_CadEstado_e_Estado,
   UDM_TotalDePedidosPorCliente_X_Representada_X_Datas,
   UFrmTotalDePedidosPorCliente_X_Representada_X_Datas, UDM_PesqPorNumero,
   UFrm_PesqPedidoPorNumero, UFrm_PesqPedPorOC, UDM_ListaClientesSemCompra,
-  UFrm_ListaClientesSemCompra;
+  UFrm_ListaClientesSemCompra, UDM_TotalProdVendPorCliente,
+  UFrm_PesquisaSomaProdutosVendidosPorCliente;
 
 //Procedure para chamar a tela de cadastro de estados
 procedure TFrm_Principal.Cadastro1Click(Sender: TObject);
@@ -396,6 +400,29 @@ Finally
 End;
 end;
 
+{ Pesquisa de Soma Total de Produtos Vendidos por Cliente, em um intervalo de Datas }
+procedure TFrm_Principal.PesquisaSomaProdutosVendidosPorCliente(
+  Sender: TObject);
+begin
+Try
+  Application.CreateForm(TDM_TotalProdVendPorCliente, DM_TotalProdVendPorCliente);
+  Application.CreateForm(TFrm_PesquisaSomaProdutosVendidosPorCliente, Frm_PesquisaSomaProdutosVendidosPorCliente);
+  DM_TotalProdVendPorCliente.FDQ_Consulta.Active := True;
+  DM_TotalProdVendPorCliente.FDQ_Produto.Active := True;
+  DM_TotalProdVendPorCliente.FDQ_ProdutoPesq.Active := True;
+  Frm_PesquisaSomaProdutosVendidosPorCliente.ShowModal;
+  if DM_TotalProdVendPorCliente.FDQ_Consulta.Active = True then
+    DM_TotalProdVendPorCliente.FDQ_Consulta.Active := False;
+
+  DM_TotalProdVendPorCliente.FDQ_Produto.Active := False;
+  DM_TotalProdVendPorCliente.FDQ_ProdutoPesq.Active := False;
+
+finally
+  FreeAndNil(Frm_PesquisaSomaProdutosVendidosPorCliente);
+  FreeAndNil(DM_TotalProdVendPorCliente);
+end;
+end;
+
 procedure TFrm_Principal.PesquisaTotalDePedidosPorRepresentanteRepresentada_e_IntervaloDeDatas(
   Sender: TObject);
 begin
@@ -461,6 +488,12 @@ Finally
   FreeAndNil(Frm_Lista_Representadas);
   FreeAndNil(DM_Representadas);
 End;
+end;
+
+procedure TFrm_Principal.SomaTotaldeProdutoVendidoporCliente1Click(
+  Sender: TObject);
+begin
+PesquisaSomaProdutosVendidosPorCliente(Sender);
 end;
 
 procedure TFrm_Principal.ToolButton1Click(Sender: TObject);

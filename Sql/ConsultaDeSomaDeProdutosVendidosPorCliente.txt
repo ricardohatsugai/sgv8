@@ -1,0 +1,15 @@
+select 
+    clientes.razaosocial,
+    itenspedido.codproduto,
+    sum( itenspedido.quant ) sum_of_quant
+from pedido
+   inner join clientes on (pedido.codcliente = clientes.codigo)
+   inner join itenspedido on (pedido.codigo = itenspedido.codpedido)
+where 
+   (
+      (pedido.data between '01.01.2000' and '01.07.2022')
+   and 
+      (itenspedido.codproduto = 6670)
+   )
+group by clientes.razaosocial, itenspedido.codproduto
+order by 3 desc
