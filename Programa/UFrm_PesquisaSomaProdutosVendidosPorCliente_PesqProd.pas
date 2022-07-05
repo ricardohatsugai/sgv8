@@ -17,6 +17,7 @@ type
     Btn_Pesquisar: TBitBtn;
     procedure Btn_PesquisarClick(Sender: TObject);
     procedure DBGrid1CellClick(Column: TColumn);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -50,7 +51,14 @@ begin
   DM_TotalProdVendPorCliente.FDQ_Consulta.Active := False;
   DM_TotalProdVendPorCliente.FDQ_Consulta.Params[2].AsInteger := DM_TotalProdVendPorCliente.FDQ_ProdutoPesqCODIGO.AsInteger;
   DM_TotalProdVendPorCliente.FDQ_Consulta.Active := True;
+
   ModalResult := -1;
+end;
+
+procedure TFrm_PesquisaSomaProdutosVendidosPorCliente_PesqProd.FormShow(
+  Sender: TObject);
+begin
+Edit1.SetFocus;
 end;
 
 end.
