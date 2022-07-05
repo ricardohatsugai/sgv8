@@ -13,6 +13,7 @@ object Frm_PesquisaSomaProdutosVendidosPorCliente: TFrm_PesquisaSomaProdutosVend
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 19
   object Panel1: TPanel
@@ -66,7 +67,6 @@ object Frm_PesquisaSomaProdutosVendidosPorCliente: TFrm_PesquisaSomaProdutosVend
     Height = 120
     Align = alClient
     TabOrder = 1
-    ExplicitHeight = 137
     object Bevel2: TBevel
       Left = 1
       Top = 1

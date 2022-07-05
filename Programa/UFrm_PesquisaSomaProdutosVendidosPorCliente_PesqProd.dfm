@@ -13,6 +13,7 @@ object Frm_PesquisaSomaProdutosVendidosPorCliente_PesqProd: TFrm_PesquisaSomaPro
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 19
   object Panel1: TPanel
@@ -64,10 +65,6 @@ object Frm_PesquisaSomaProdutosVendidosPorCliente_PesqProd: TFrm_PesquisaSomaPro
     Height = 96
     Align = alClient
     TabOrder = 1
-    ExplicitLeft = 160
-    ExplicitTop = 64
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object Label1: TLabel
       Left = 24
       Top = 32
@@ -89,6 +86,7 @@ object Frm_PesquisaSomaProdutosVendidosPorCliente_PesqProd: TFrm_PesquisaSomaPro
       Width = 177
       Height = 42
       Caption = '&Pesquisar'
+      Default = True
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
