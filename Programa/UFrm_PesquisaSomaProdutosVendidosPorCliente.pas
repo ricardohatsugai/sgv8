@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
-  Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons, Vcl.ComCtrls, FireDAC.Stan.Param;
+  Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons, Vcl.ComCtrls, FireDAC.Stan.Param, System.DateUtils;
 
 type
   TFrm_PesquisaSomaProdutosVendidosPorCliente = class(TForm)
@@ -24,6 +24,7 @@ type
     Btn_Pesquisar: TBitBtn;
     procedure Btn_PesquisarClick(Sender: TObject);
     procedure Spd_ConsultaProdutoClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -56,6 +57,12 @@ begin
   end;
 end;
 
+procedure TFrm_PesquisaSomaProdutosVendidosPorCliente.FormShow(Sender: TObject);
+begin
+DateTimePicker1.Date := StartOfTheMonth(Now);
+DateTimePicker2.Date := EndOfTheMonth(Now);
+end;
+
 procedure TFrm_PesquisaSomaProdutosVendidosPorCliente.Spd_ConsultaProdutoClick(
   Sender: TObject);
 begin
@@ -63,6 +70,11 @@ Try
   Application.CreateForm(TFrm_PesquisaSomaProdutosVendidosPorCliente_PesqProd, Frm_PesquisaSomaProdutosVendidosPorCliente_PesqProd);
   Frm_PesquisaSomaProdutosVendidosPorCliente_PesqProd.ShowModal;
   Edit1.Text := DM_TotalProdVendPorCliente.FDQ_ProdutoPesqREFERENCIA.AsString;
+
+  DM_TotalProdVendPorCliente.FDQ_Consulta.Active := False;
+  DM_TotalProdVendPorCliente.FDQ_Consulta.Params[0].AsDate := DateTimePicker1.Date;
+  DM_TotalProdVendPorCliente.FDQ_Consulta.Params[1].AsDate := DateTimePicker2.Date;
+  DM_TotalProdVendPorCliente.FDQ_Consulta.Active := True;
 
 finally
   FreeAndNil(Frm_PesquisaSomaProdutosVendidosPorCliente_PesqProd);
