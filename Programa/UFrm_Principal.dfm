@@ -7887,13 +7887,17 @@ object Frm_Principal: TFrm_Principal
         Caption = 'Clientes que est'#227'o sem compra '#224' partir de uma data'
         OnClick = Clientesqueestosemcomprapartirdeumadata1Click
       end
+      object SomaTotaldeProdutoVendidoporCliente1: TMenuItem
+        Caption = 'Soma Total de Produto Vendido por Cliente'
+        OnClick = SomaTotaldeProdutoVendidoporCliente1Click
+      end
     end
   end
   object ImageList1: TImageList
     Left = 472
     Top = 72
     Bitmap = {
-      494C01010900D801580110001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010900D8015C0110001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000003000000001002000000000000030
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

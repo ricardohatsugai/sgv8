@@ -50,7 +50,10 @@ uses
   UFrm_PesqPedPorOC in 'UFrm_PesqPedPorOC.pas' {Frm_PesqPedPorOC},
   UFrm_Lista_de_Pedidos_ReplicarPedidos in 'UFrm_Lista_de_Pedidos_ReplicarPedidos.pas' {Frm_Lista_Pedidos_ReplicarPedidos},
   UDM_ListaClientesSemCompra in 'UDM_ListaClientesSemCompra.pas' {DM_ListaClientesSemCompra: TDataModule},
-  UFrm_ListaClientesSemCompra in 'UFrm_ListaClientesSemCompra.pas' {Frm_ListaClientesSemCompra};
+  UFrm_ListaClientesSemCompra in 'UFrm_ListaClientesSemCompra.pas' {Frm_ListaClientesSemCompra},
+  UDM_TotalProdVendPorCliente in 'UDM_TotalProdVendPorCliente.pas' {DM_TotalProdVendPorCliente: TDataModule},
+  UFrm_PesquisaSomaProdutosVendidosPorCliente in 'UFrm_PesquisaSomaProdutosVendidosPorCliente.pas' {Frm_PesquisaSomaProdutosVendidosPorCliente},
+  UFrm_PesquisaSomaProdutosVendidosPorCliente_PesqProd in 'UFrm_PesquisaSomaProdutosVendidosPorCliente_PesqProd.pas' {Frm_PesquisaSomaProdutosVendidosPorCliente_PesqProd};
 
 {$R *.res}
 
