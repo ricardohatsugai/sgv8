@@ -2382,7 +2382,7 @@ object DM_ImpressaoDePedido: TDM_ImpressaoDePedido
         object frxDBDataset1CLIENTE_RAZAOSOCIAL_LOOKUP: TfrxMemoView
           Left = 480.000310000000000000
           Top = 3.779530000000000000
-          Width = 563.149970000000000000
+          Width = 563.149606299212600000
           Height = 15.118110240000000000
           DataSet = frxDBDSPedido
           DataSetName = 'frxDBDataset1'
@@ -3449,7 +3449,7 @@ object DM_ImpressaoDePedido: TDM_ImpressaoDePedido
       LookupKeyFields = 'CODIGO'
       LookupResultField = 'RAZAOSOCIAL'
       KeyFields = 'CODCLIENTE'
-      Size = 50
+      Size = 100
       Lookup = True
     end
     object FDQ_PedidoCLIENTE_CGC_LOOKUP: TStringField
