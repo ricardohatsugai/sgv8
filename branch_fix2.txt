@@ -1,0 +1,4 @@
+Trindade, 19 de Setembro de 2022 - Segunda-feira.
+
+Neste fix2, foi feita a correção do campo Razão Social, da cópia
+do pedido, pois este não aparecia todo nome da razão social do cliente.
