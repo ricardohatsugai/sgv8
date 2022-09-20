@@ -1,1 +1,1 @@
-# sgv8 - Sistema de Gerenciamento de Vendas - versão 8
+# sgv8 - Sistema de Gestão de Vendas - versão 8
