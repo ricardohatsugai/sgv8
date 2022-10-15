@@ -80,6 +80,7 @@ type
     procedure SomaTotaldeProdutoVendidoporCliente1Click(Sender: TObject);
   private
     { Private declarations }
+    Function VersaoExe: String;
   public
     { Public declarations }
     procedure ListaClientes(Sender: TObject);
@@ -233,6 +234,7 @@ begin
   End;
 
   StatusBar1.Panels[0].Text := 'Usuário logado: '+DM_Login.FDQ_UsuariosNOME.AsString;
+  Caption := 'Trindade Representações Comerciais Ltda. - Versão ' + VersaoExe;
 end;
 
 
@@ -537,5 +539,72 @@ procedure TFrm_Principal.Vendedores1Click(Sender: TObject);
 begin
 CadastroDeVendedores(Sender);
 end;
+
+
+
+function TFrm_Principal.VersaoExe: String;
+type
+    PFFI = ^vs_FixedFileInfo;
+var
+    F : PFFI;
+    Handle : Dword;
+    Len : Longint;
+    Data : Pchar;
+    Buffer : Pointer;
+    Tamanho : Dword;
+    Parquivo: Pchar;
+    Arquivo : String;
+begin
+    Arquivo := Application.ExeName;
+    Parquivo := StrAlloc(Length(Arquivo) + 1);
+    StrPcopy(Parquivo, Arquivo);
+    Len := GetFileVersionInfoSize(Parquivo, Handle);
+    Result := '';
+        if Len > 0 then
+        begin
+            Data:=StrAlloc(Len+1);
+            if GetFileVersionInfo(Parquivo,Handle,Len,Data) then
+            begin
+                VerQueryValue(Data, '\',Buffer,Tamanho);
+                F := PFFI(Buffer);
+                Result := Format('%d.%d.%d.%d',[HiWord(F^.dwFileVersionMs),LoWord(F^.dwFileVersionMs),HiWord(F^.dwFileVersionLs),Loword(F^.dwFileVersionLs)]);
+            end;
+            StrDispose(Data);
+        end;
+        StrDispose(Parquivo);
+
+end;
+
+{Function VersaoExe: String;
+type
+    PFFI = ^vs_FixedFileInfo;
+var
+    F : PFFI;
+    Handle : Dword;
+    Len : Longint;
+    Data : Pchar;
+    Buffer : Pointer;
+    Tamanho : Dword;
+    Parquivo: Pchar;
+    Arquivo : String;
+begin
+    Arquivo := Application.ExeName;
+    Parquivo := StrAlloc(Length(Arquivo) + 1);
+    StrPcopy(Parquivo, Arquivo);
+    Len := GetFileVersionInfoSize(Parquivo, Handle);
+    Result := '';
+        if Len > 0 then
+        begin
+            Data:=StrAlloc(Len+1);
+            if GetFileVersionInfo(Parquivo,Handle,Len,Data) then
+            begin
+                VerQueryValue(Data, '\',Buffer,Tamanho);
+                F := PFFI(Buffer);
+                Result := Format('%d.%d.%d.%d',[HiWord(F^.dwFileVersionMs),LoWord(F^.dwFileVersionMs),HiWord(F^.dwFileVersionLs),Loword(F^.dwFileVersionLs)]);
+            end;
+            StrDispose(Data);
+        end;
+        StrDispose(Parquivo);
+end;}
 
 end.
