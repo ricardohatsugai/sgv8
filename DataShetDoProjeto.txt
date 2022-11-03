@@ -89,3 +89,7 @@ o código do sistema do Cliente. Versãso final 1.0.1.43;
 - 14/09/2020 - (À fazer) Na tela de alteração de pedidos, o campo de informar o código de produto do cliente na tela
 de alteração de produtos, está acusando que a tabela de prod_clie_cliente está desabilitado. Vamos tentar consertar.
   Correção feita, e alteração do código de produtos do cliente, efetuado com sucesso.
+  
+- 22/10/2022 - (À fazer) Pesquisa de clientes que mais compraram pelos parâmetros:
+	- datas(Data inicial e data final);
+	- Representada;
