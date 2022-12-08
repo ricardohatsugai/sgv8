@@ -324,8 +324,10 @@ Try
   Application.CreateForm(TDM_Pagamentos, DM_Pagamentos);
   Application.CreateForm(TFrm_Pagamentos, Frm_Pagamentos);
   DM_Pagamentos.FDQ_Pagamento.Active := True;
+  DM_Pagamentos.FDT_Fabricas.Active := True;
   Frm_Pagamentos.ShowModal;
   DM_Pagamentos.FDQ_Pagamento.Active := false;
+  DM_Pagamentos.FDT_Fabricas.Active := False;
 Finally
   FreeAndNil(Frm_Pagamentos);
   FreeAndNil(DM_Pagamentos);
@@ -575,39 +577,4 @@ begin
 
 end;
 
-<<<<<<< HEAD
-=======
-{Function VersaoExe: String;
-type
-    PFFI = ^vs_FixedFileInfo;
-var
-    F : PFFI;
-    Handle : Dword;
-    Len : Longint;
-    Data : Pchar;
-    Buffer : Pointer;
-    Tamanho : Dword;
-    Parquivo: Pchar;
-    Arquivo : String;
-begin
-    Arquivo := Application.ExeName;
-    Parquivo := StrAlloc(Length(Arquivo) + 1);
-    StrPcopy(Parquivo, Arquivo);
-    Len := GetFileVersionInfoSize(Parquivo, Handle);
-    Result := '';
-        if Len > 0 then
-        begin
-            Data:=StrAlloc(Len+1);
-            if GetFileVersionInfo(Parquivo,Handle,Len,Data) then
-            begin
-                VerQueryValue(Data, '\',Buffer,Tamanho);
-                F := PFFI(Buffer);
-                Result := Format('%d.%d.%d.%d',[HiWord(F^.dwFileVersionMs),LoWord(F^.dwFileVersionMs),HiWord(F^.dwFileVersionLs),Loword(F^.dwFileVersionLs)]);
-            end;
-            StrDispose(Data);
-        end;
-        StrDispose(Parquivo);
-end;}
-
->>>>>>> 21a72e9d98f791cd7158eeaa62d1e72cba1c840a
 end.

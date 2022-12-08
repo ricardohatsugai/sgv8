@@ -18,6 +18,7 @@ type
     DBEdit_Codigo: TDBEdit;
     Lbl_Pagamento: TLabel;
     DBEdit_Pagamento: TDBEdit;
+    DBL_Fabrica: TDBLookupComboBox;
   private
     { Private declarations }
   public

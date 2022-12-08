@@ -5,7 +5,7 @@ object Frm_Pagamentos: TFrm_Pagamentos
   BorderStyle = bsSingle
   Caption = 'Cadastro de pagamentos'
   ClientHeight = 516
-  ClientWidth = 581
+  ClientWidth = 746
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,40 +19,34 @@ object Frm_Pagamentos: TFrm_Pagamentos
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 581
+    Width = 746
     Height = 41
     Align = alTop
     TabOrder = 0
-    ExplicitLeft = 184
-    ExplicitTop = 24
-    ExplicitWidth = 185
+    ExplicitWidth = 581
     object DBNavigator1: TDBNavigator
       Left = 1
       Top = 1
-      Width = 579
+      Width = 744
       Height = 39
       DataSource = DM_Pagamentos.DS_Pagamentos
       Align = alClient
       TabOrder = 0
-      ExplicitLeft = 168
-      ExplicitTop = 16
-      ExplicitWidth = 240
-      ExplicitHeight = 25
+      ExplicitWidth = 579
     end
   end
   object Panel2: TPanel
     Left = 0
     Top = 97
-    Width = 581
+    Width = 746
     Height = 419
     Align = alClient
     TabOrder = 1
-    ExplicitTop = 113
-    ExplicitHeight = 403
+    ExplicitWidth = 581
     object DBGrid1: TDBGrid
       Left = 1
       Top = 1
-      Width = 579
+      Width = 744
       Height = 417
       Align = alClient
       DataSource = DM_Pagamentos.DS_Pagamentos
@@ -68,10 +62,11 @@ object Frm_Pagamentos: TFrm_Pagamentos
   object Panel3: TPanel
     Left = 0
     Top = 41
-    Width = 581
+    Width = 746
     Height = 56
     Align = alTop
     TabOrder = 2
+    ExplicitWidth = 581
     object Lbl_Codigo: TLabel
       Left = 16
       Top = 5
@@ -106,6 +101,15 @@ object Frm_Pagamentos: TFrm_Pagamentos
       DataField = 'PAGAMENTO'
       DataSource = DM_Pagamentos.DS_Pagamentos
       TabOrder = 1
+    end
+    object DBL_Fabrica: TDBLookupComboBox
+      Left = 417
+      Top = 21
+      Width = 272
+      Height = 21
+      DataField = 'Fabrica'
+      DataSource = DM_Pagamentos.DS_Pagamentos
+      TabOrder = 2
     end
   end
 end

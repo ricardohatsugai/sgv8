@@ -461,6 +461,11 @@ DM_Cadastro_de_Pedidos.FDQ_Produtos.Close;
 DM_Cadastro_de_Pedidos.FDQ_Produtos.ParamByName('COD_FABRICA').AsInteger :=
   DM_Cadastro_de_Pedidos.FDQ_PedidoCODFABRICA.AsInteger;
 DM_Cadastro_de_Pedidos.FDQ_Produtos.Open;
+
+DM_Cadastro_de_Pedidos.FDQ_Pagamento.Active := False;
+DM_Cadastro_de_Pedidos.FDQ_Pagamento.ParamByName('cod').AsInteger :=
+  DM_Cadastro_de_Pedidos.FDQ_PedidoCODFABRICA.AsInteger;
+DM_Cadastro_de_Pedidos.FDQ_Pagamento.Active := True;
 end;
 
 procedure TFrm_Cadastro_de_Pedido.FormClose(Sender: TObject;

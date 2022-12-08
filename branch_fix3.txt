@@ -1,0 +1,3 @@
+  Trindade, 08 de Novembro de 2022.
+
+  Nesta branch, iremos tratar do assunto de casas decimais que aparece na cópia do pedido.

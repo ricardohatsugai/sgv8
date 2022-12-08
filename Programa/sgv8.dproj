@@ -46,6 +46,8 @@
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
+        <VerInfo_Locale>1046</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
         <SanitizedProjectName>sgv8</SanitizedProjectName>
         <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
@@ -60,10 +62,10 @@
         <DCC_K>false</DCC_K>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
         <BT_BuildType>Debug</BT_BuildType>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <DCC_UsePackage>DBXSqliteDriver;RESTComponents;DataSnapServerMidas;DBXDb2Driver;DBXInterBaseDriver;vclactnband;vclFireDAC;emsclientfiredac;DataSnapFireDAC;svnui;tethering;FireDACADSDriver;DBXMSSQLDriver;DatasnapConnectorsFreePascal;FireDACMSSQLDriver;vcltouch;vcldb;bindcompfmx;svn;Intraweb;DBXOracleDriver;inetdb;FmxTeeUI;emsedge;FireDACIBDriver;fmx;fmxdae;frx24;vclib;FireDACDBXDriver;dbexpress;IndyCore;vclx;dsnap;DataSnapCommon;emsclient;FireDACCommon;RESTBackendComponents;DataSnapConnectors;VCLRESTComponents;soapserver;vclie;bindengine;DBXMySQLDriver;FireDACOracleDriver;CloudService;FireDACMySQLDriver;DBXFirebirdDriver;FireDACCommonODBC;FireDACCommonDriver;DataSnapClient;inet;bindcompdbx;IndyIPCommon;vcl;DBXSybaseASEDriver;IndyIPServer;IndySystem;FireDACDb2Driver;dsnapcon;FireDACMSAccDriver;fmxFireDAC;FireDACInfxDriver;vclimg;TeeDB;FireDAC;emshosting;FireDACSqliteDriver;FireDACPgDriver;ibmonitor;FireDACASADriver;DBXOdbcDriver;FireDACTDataDriver;FMXTee;soaprtl;DbxCommonDriver;ibxpress;Tee;DataSnapServer;xmlrtl;soapmidas;DataSnapNativeClient;fmxobj;vclwinx;ibxbindings;rtl;FireDACDSDriver;DbxClientDriver;DBXSybaseASADriver;frxTee24;CustomIPTransport;vcldsnap;bindcomp;appanalytics;DBXInformixDriver;IndyIPClient;bindcompvcl;TeeUI;frxe24;dbxcds;VclSmp;adortl;FireDACODBCDriver;DataSnapIndy10ServerTransport;frxDB24;dsnapxml;DataSnapProviderClient;dbrtl;inetdbxpress;FireDACMongoDBDriver;IndyProtocols;fmxase;$(DCC_UsePackage)</DCC_UsePackage>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
@@ -83,11 +85,11 @@
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Icon_MainIcon>sgv8_Icon.ico</Icon_MainIcon>
-        <VerInfo_Build>53</VerInfo_Build>
+        <VerInfo_Build>54</VerInfo_Build>
         <UWP_DelphiLogo44>C:\sgv8\Icones\TRECO---Trindade-Rep(1).png</UWP_DelphiLogo44>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <UWP_DelphiLogo150>C:\sgv8\Icones\TRECO---Trindade-Rep(1).png</UWP_DelphiLogo150>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.53;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.54;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <AppEnableHighDPI>true</AppEnableHighDPI>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
@@ -99,6 +101,10 @@
         <DCC_DebugInformation>0</DCC_DebugInformation>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <VerInfo_Release>1</VerInfo_Release>
+        <VerInfo_Build>6</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.1.6;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
         <Icon_MainIcon>sgv8_Icon1.ico</Icon_MainIcon>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <UWP_DelphiLogo150>C:\sgv8\Icones\TRECO---Trindade-Rep(1).png</UWP_DelphiLogo150>
@@ -395,12 +401,39 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployClass Name="ProjectiOSDeviceResourceRules">
+                <DeployFile LocalName="Win32\Release\sgv8.exe" Configuration="Release" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>sgv8.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="sgv8.todo" Configuration="Release" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployClass Name="DependencyModule">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.dll;.bpl</Extensions>
+                    </Platform>
                     <Platform Name="iOSDevice64">
                         <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
                     </Platform>
                 </DeployClass>
                 <DeployClass Name="ProjectOSXResource">
@@ -779,27 +812,12 @@
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
-                <DeployClass Name="DependencyModule">
-                    <Platform Name="Win32">
-                        <Operation>0</Operation>
-                        <Extensions>.dll;.bpl</Extensions>
-                    </Platform>
+                <DeployClass Name="ProjectiOSDeviceResourceRules">
                     <Platform Name="iOSDevice64">
                         <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="OSX32">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="iOSSimulator">
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
                     </Platform>
                 </DeployClass>
                 <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>

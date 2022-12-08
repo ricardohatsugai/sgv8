@@ -550,12 +550,21 @@ object DM_Cadastro_de_Pedidos: TDM_Cadastro_de_Pedidos
     Connection = DM_Principal.FDConnection1
     SQL.Strings = (
       'select '
-      '    pagamento.codigo,'
-      '    pagamento.pagamento'
-      'from pagamento'
-      'order by pagamento.pagamento')
+      '    p.codigo,'
+      '    p.pagamento,'
+      '    p.cod_fab'
+      'from pagamento p '
+      'where p.cod_fab =:cod '
+      'order by p.pagamento')
     Left = 424
     Top = 24
+    ParamData = <
+      item
+        Name = 'COD'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
+      end>
     object FDQ_PagamentoCODIGO: TIntegerField
       FieldName = 'CODIGO'
       Origin = 'CODIGO'
@@ -566,6 +575,10 @@ object DM_Cadastro_de_Pedidos: TDM_Cadastro_de_Pedidos
       FieldName = 'PAGAMENTO'
       Origin = 'PAGAMENTO'
       Size = 80
+    end
+    object FDQ_PagamentoCOD_FAB: TIntegerField
+      FieldName = 'COD_FAB'
+      Origin = 'COD_FAB'
     end
   end
   object FDQ_Transporte: TFDQuery
