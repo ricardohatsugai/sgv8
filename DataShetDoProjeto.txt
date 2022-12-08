@@ -75,19 +75,15 @@ quer realmente foram entregues ao cliente. Acrescentar também a Data de faturame
 
 - 15/05/2018 - (Concluido) Tela de cadastro de Cidades.
 
-- 28/07/2018 - (A Fazer) Implementar o sistema com o cálculo automático de comissões. Tarefa esta que terei que 
-programar uma implementação no banco de dados, mais no delphi. Após esta implementação, criar um relatório destas
-comissões.
+- 28/07/2018 - (A Fazer) Implementar o sistema com o cálculo automático de comissões. Tarefa esta que terei que programar uma implementação no banco de dados, mais no delphi. Após esta implementação, criar um relatório destas comissões.
 
 - 05/08/2018 - (Concluido) Mascara no cgc da tela de pesquisa CLIENTE X FABRICA X ENTRE DATAS X SOMA TOTAL DO PERIODO.
 
-- 14/08/2018 - (Concluido) Incluido na tabela ITENS_DE_PEDIDO o campo COD_DO_CLIENTE, para aparecer na cópia do pedido 
-o código do sistema do Cliente. Versãso final 1.0.1.43;
+- 14/08/2018 - (Concluido) Incluido na tabela ITENS_DE_PEDIDO o campo COD_DO_CLIENTE, para aparecer na cópia do pedido o código do sistema do Cliente. Versãso final 1.0.1.43;
 
 - 17/12/2019 - (À fazer) Desenvolver uma tela de cadastramento de campanhas de metas e rebate de metas.
 
-- 14/09/2020 - (À fazer) Na tela de alteração de pedidos, o campo de informar o código de produto do cliente na tela
-de alteração de produtos, está acusando que a tabela de prod_clie_cliente está desabilitado. Vamos tentar consertar.
+- 14/09/2020 - (À fazer) Na tela de alteração de pedidos, o campo de informar o código de produto do cliente na tela de alteração de produtos, está acusando que a tabela de prod_clie_cliente está desabilitado. Vamos tentar consertar.
   Correção feita, e alteração do código de produtos do cliente, efetuado com sucesso.
   
 - 22/10/2022 - (À fazer) Pesquisa de clientes que mais compraram pelos parâmetros:
