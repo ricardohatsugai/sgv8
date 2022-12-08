@@ -324,8 +324,10 @@ Try
   Application.CreateForm(TDM_Pagamentos, DM_Pagamentos);
   Application.CreateForm(TFrm_Pagamentos, Frm_Pagamentos);
   DM_Pagamentos.FDQ_Pagamento.Active := True;
+  DM_Pagamentos.FDT_Fabricas.Active := True;
   Frm_Pagamentos.ShowModal;
   DM_Pagamentos.FDQ_Pagamento.Active := false;
+  DM_Pagamentos.FDT_Fabricas.Active := False;
 Finally
   FreeAndNil(Frm_Pagamentos);
   FreeAndNil(DM_Pagamentos);
