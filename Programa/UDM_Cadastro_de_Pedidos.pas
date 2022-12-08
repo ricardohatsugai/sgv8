@@ -183,6 +183,7 @@ type
     FDQ_Itens_ReplicaCTS: TStringField;
     FDQ_Itens_ReplicaCOD_DO_CLIENTE: TStringField;
     FDSchemaAdapter2: TFDSchemaAdapter;
+    FDQ_PagamentoCOD_FAB: TIntegerField;
   private
     { Private declarations }
   public

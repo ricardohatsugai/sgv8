@@ -59,13 +59,17 @@ Try
   Application.CreateForm(TFrm_Cadastro_de_Pedido, Frm_Cadastro_de_Pedido);
   DM_Cadastro_de_Pedidos.FDQ_Cliente.Open;
   DM_Cadastro_de_Pedidos.FDQ_Fabrica.Open;
-  DM_Cadastro_de_Pedidos.FDQ_Pagamento.Open;
   DM_Cadastro_de_Pedidos.FDQ_Transporte.Open;
   DM_Cadastro_de_Pedidos.FDQ_Vendedor.Open;
   DM_Cadastro_de_Pedidos.FDQ_Frete.Open;
 
 DM_Cadastro_de_Pedidos.FDQ_Produtos.ParamByName('COD_FABRICA').AsInteger :=
   DM_Listagem_de_pedidos.FDQ_ListagemDePedidosCODFABRICA.AsInteger;
+
+  if DM_Cadastro_de_Pedidos.FDQ_Pagamento.Active = True then
+    DM_Cadastro_de_Pedidos.FDQ_Pagamento.Active := False;
+  DM_Cadastro_de_Pedidos.FDQ_Pagamento.ParamByName('cod').AsInteger := DM_Listagem_de_pedidos.FDQ_ListagemDePedidosCODFABRICA.AsInteger;
+  DM_Cadastro_de_Pedidos.FDQ_Pagamento.Active := True;
 
   DM_Cadastro_de_Pedidos.FDQ_Produtos.Open;
   DM_Cadastro_de_Pedidos.FDQ_Pedido.ParamByName('CODIGO').AsInteger := DM_Listagem_de_pedidos.FDQ_ListagemDePedidosCODIGO.AsInteger;

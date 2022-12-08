@@ -14,6 +14,12 @@ type
     FDQ_PagamentoCODIGO: TIntegerField;
     FDQ_PagamentoPAGAMENTO: TStringField;
     DS_Pagamentos: TDataSource;
+    FDQ_PagamentoCOD_FAB: TIntegerField;
+    FDT_Fabricas: TFDTable;
+    FDT_FabricasCODIGO: TIntegerField;
+    FDT_FabricasNOMEFANTASIA: TStringField;
+    FDT_FabricasRAZAOSOCIAL: TStringField;
+    FDQ_PagamentoFabrica: TStringField;
   private
     { Private declarations }
   public
