@@ -308,6 +308,7 @@ object Frm_Cadastro_de_Pedido: TFrm_Cadastro_de_Pedido
       Top = 65
       Width = 145
       Height = 21
+      Style = csDropDownList
       DataField = 'TIPO'
       DataSource = DM_Cadastro_de_Pedidos.DS_Pedido
       Items.Strings = (
