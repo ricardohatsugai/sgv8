@@ -171,6 +171,9 @@ type
     frxHTMLExport1: TfrxHTMLExport;
     frxJPEGExport1: TfrxJPEGExport;
     FDQ_PedidoOBS: TStringField;
+    FDQ_PedidoVENDDOR_TEL_LOOK: TStringField;
+    FDQ_VendedorEMAIL: TStringField;
+    FDQ_PedidoVENDEDOR_EMAIL_LOOK: TStringField;
   private
     { Private declarations }
   public
