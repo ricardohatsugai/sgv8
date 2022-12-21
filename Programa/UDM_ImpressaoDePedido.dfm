@@ -11,7 +11,7 @@ object DM_ImpressaoDePedido: TDM_ImpressaoDePedido
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 43050.324924583300000000
-    ReportOptions.LastChange = 44916.093415694440000000
+    ReportOptions.LastChange = 44916.504762407410000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -2389,14 +2389,14 @@ object DM_ImpressaoDePedido: TDM_ImpressaoDePedido
         end
         object frxDBDataset1VENDEDOR_NOME_LOOKUP1: TfrxMemoView
           Left = 188.976500000000000000
-          Top = 7.779530000000000000
+          Top = 2.779530000000000000
           Width = 298.582870000000000000
-          Height = 18.897650000000000000
+          Height = 15.118120000000000000
           DataSet = frxDBDSPedido
           DataSetName = 'frxDBDataset1'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -13
+          Font.Height = -12
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           Memo.UTF8W = (
@@ -2405,18 +2405,34 @@ object DM_ImpressaoDePedido: TDM_ImpressaoDePedido
         end
         object frxDBDataset1VENDDOR_TEL_LOOK: TfrxMemoView
           Left = 188.976500000000000000
-          Top = 38.795300000000000000
-          Width = 279.685220000000000000
-          Height = 18.897650000000000000
+          Top = 41.795300000000000000
+          Width = 294.803340000000000000
+          Height = 15.118120000000000000
           DataSet = frxDBDSPedido
           DataSetName = 'frxDBDataset1'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -13
+          Font.Height = -12
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           Memo.UTF8W = (
             'Fone: [frxDBDataset1."VENDDOR_TEL_LOOK"]')
+          ParentFont = False
+        end
+        object frxDBDataset1VENDEDOR_EMAIL_LOOK: TfrxMemoView
+          Left = 188.976500000000000000
+          Top = 22.677180000000000000
+          Width = 298.582870000000000000
+          Height = 15.118120000000000000
+          DataSet = frxDBDSPedido
+          DataSetName = 'frxDBDataset1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.UTF8W = (
+            'E-Mail: [frxDBDataset1."VENDEDOR_EMAIL_LOOK"]')
           ParentFont = False
         end
       end
@@ -3789,6 +3805,16 @@ object DM_ImpressaoDePedido: TDM_ImpressaoDePedido
       Size = 15
       Lookup = True
     end
+    object FDQ_PedidoVENDEDOR_EMAIL_LOOK: TStringField
+      FieldKind = fkLookup
+      FieldName = 'VENDEDOR_EMAIL_LOOK'
+      LookupDataSet = FDQ_Vendedor
+      LookupKeyFields = 'CODIGO'
+      LookupResultField = 'EMAIL'
+      KeyFields = 'CODVENDEDOR'
+      Size = 45
+      Lookup = True
+    end
     object FDQ_PedidoCOD_FRETE: TIntegerField
       FieldName = 'COD_FRETE'
       Origin = 'COD_FRETE'
@@ -4212,6 +4238,7 @@ object DM_ImpressaoDePedido: TDM_ImpressaoDePedido
       'CODVENDEDOR=CODVENDEDOR'
       'VENDEDOR_NOME_LOOKUP=VENDEDOR_NOME_LOOKUP'
       'VENDDOR_TEL_LOOK=VENDDOR_TEL_LOOK'
+      'VENDEDOR_EMAIL_LOOK=VENDEDOR_EMAIL_LOOK'
       'COD_FRETE=COD_FRETE'
       'FRETE_LOOKUP=FRETE_LOOKUP'
       'FRETE=FRETE'
@@ -4476,7 +4503,8 @@ object DM_ImpressaoDePedido: TDM_ImpressaoDePedido
       'select '
       '    vendedor.codigo,'
       '    vendedor.nome,'
-      '    vendedor.celular'
+      '    vendedor.celular,'
+      '    vendedor.email'
       'from vendedor')
     Left = 48
     Top = 336
@@ -4495,6 +4523,11 @@ object DM_ImpressaoDePedido: TDM_ImpressaoDePedido
       FieldName = 'CELULAR'
       Origin = 'CELULAR'
       Size = 80
+    end
+    object FDQ_VendedorEMAIL: TStringField
+      FieldName = 'EMAIL'
+      Origin = 'EMAIL'
+      Size = 45
     end
   end
   object FDQ_Fabrica: TFDQuery
