@@ -11,7 +11,7 @@ object DM_ImpressaoDePedido: TDM_ImpressaoDePedido
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 43050.324924583300000000
-    ReportOptions.LastChange = 44916.504762407410000000
+    ReportOptions.LastChange = 44925.369089722220000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -3115,6 +3115,7 @@ object DM_ImpressaoDePedido: TDM_ImpressaoDePedido
           Top = 0.559060000000000000
           Width = 423.307360000000000000
           Height = 13.228346460000000000
+          StretchMode = smMaxHeight
           DataField = 'DESCRICAO'
           DataSet = frxDBDSItens
           DataSetName = 'frxDBDataset2'
