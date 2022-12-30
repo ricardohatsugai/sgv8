@@ -11,7 +11,7 @@ object DM_ImpressaoDePedido: TDM_ImpressaoDePedido
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 43050.324924583300000000
-    ReportOptions.LastChange = 44925.369089722220000000
+    ReportOptions.LastChange = 44925.443506296290000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -3071,6 +3071,7 @@ object DM_ImpressaoDePedido: TDM_ImpressaoDePedido
         DataSet = frxDBDSItens
         DataSetName = 'frxDBDataset2'
         RowCount = 0
+        Stretched = True
         object Shape3: TfrxShapeView
           Align = baClient
           Width = 1046.929810000000000000
