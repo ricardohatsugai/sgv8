@@ -488,7 +488,6 @@ object Frm_Cadastro_de_Pedido_Cad_Item: TFrm_Cadastro_de_Pedido_Cad_Item
     Height = 79
     Align = alClient
     TabOrder = 2
-    ExplicitTop = 108
     object Bevel1: TBevel
       Left = 8
       Top = 6

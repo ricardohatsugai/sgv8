@@ -666,7 +666,8 @@ object DM_Cadastro_de_Pedidos: TDM_Cadastro_de_Pedidos
       '    produtos.icms,'
       '    produtos.st_goias,'
       '    produtos.st_brasilia,'
-      '    produtos.comissao'
+      '    produtos.comissao,'
+      '    produtos.precofixo'
       'from produtos'
       'where '
       '   ('
@@ -789,6 +790,10 @@ object DM_Cadastro_de_Pedidos: TDM_Cadastro_de_Pedidos
       FieldName = 'COMISSAO'
       Origin = 'COMISSAO'
       Precision = 18
+    end
+    object FDQ_ProdutosPRECOFIXO: TIntegerField
+      FieldName = 'PRECOFIXO'
+      Origin = 'PRECOFIXO'
     end
   end
   object DS_Produtos: TDataSource

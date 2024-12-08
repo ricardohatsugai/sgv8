@@ -199,8 +199,12 @@ DM_Cadastro_de_Pedidos.FDQ_ItensCODPRODUTO.Value := DM_Cadastro_de_Pedidos.FDQ_P
 DM_Cadastro_de_Pedidos.FDQ_ItensREFERENCIA.Value := DM_Cadastro_de_Pedidos.FDQ_ProdutosREFERENCIA.Value;
 DM_Cadastro_de_Pedidos.FDQ_ItensDESCRICAO.Value := DM_Cadastro_de_Pedidos.FDQ_ProdutosDESCRICAO.Value;
 DM_Cadastro_de_Pedidos.FDQ_ItensUNIDADE.Value := DM_Cadastro_de_Pedidos.FDQ_ProdutosUNIDADE.Value;
-DM_Cadastro_de_Pedidos.FDQ_ItensPRECO.Value := DM_Cadastro_de_Pedidos.FDQ_ProdutosPRECO.AsCurrency
-  * DM_Cadastro_de_Pedidos.FDQ_ItensCOIFICIENTE.AsCurrency;
+if DM_Cadastro_de_Pedidos.FDQ_ProdutosPRECOFIXO.Value = 0 then begin
+  DM_Cadastro_de_Pedidos.FDQ_ItensPRECO.Value := DM_Cadastro_de_Pedidos.FDQ_ProdutosPRECO.AsCurrency
+    * DM_Cadastro_de_Pedidos.FDQ_ItensCOIFICIENTE.AsCurrency;
+end else if DM_Cadastro_de_Pedidos.FDQ_ProdutosPRECOFIXO.Value = 1 then begin
+  DM_Cadastro_de_Pedidos.FDQ_ItensPRECO.Value := DM_Cadastro_de_Pedidos.FDQ_ProdutosPRECO.AsCurrency;
+end;
 DM_Cadastro_de_Pedidos.FDQ_ItensIPI.Value := DM_Cadastro_de_Pedidos.FDQ_ProdutosIPI.AsCurrency;
 DM_Cadastro_de_Pedidos.FDQ_ItensCOD_BARRA.Value := DM_Cadastro_de_Pedidos.FDQ_ProdutosCODBARRA.Value;
 DM_Cadastro_de_Pedidos.FDQ_ItensCLASS_FISCAL.Value := DM_Cadastro_de_Pedidos.FDQ_ProdutosCLASSFISCAL.Value;

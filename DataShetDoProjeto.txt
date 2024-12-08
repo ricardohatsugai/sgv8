@@ -89,3 +89,12 @@ quer realmente foram entregues ao cliente. Acrescentar também a Data de faturame
 - 22/10/2022 - (À fazer) Pesquisa de clientes que mais compraram pelos parâmetros:
 	- datas(Data inicial e data final);
 	- Representada;
+	
+- 08/12/2024 - (À Fazer) Alteração na tabela PRODUTOS no banco de dados para inclusão de um campo PrecoFixo do tipo Inteiro, que será uma flag. 0=não 1=sim.
+	Arquivos afetados:	- 	DataShetDoProjeto.txt
+							Programa/UDM_Cadastro_de_Pedidos.dfm
+							Programa/UDM_Cadastro_de_Pedidos.pas
+							Programa/UFrm_Cadastro_de_pedido_Cad_Item.dfm
+							Programa/UFrm_Cadastro_de_pedido_Cad_Item.pas
+							Programa/sgv8.dproj
+							Programa/sgv8.res

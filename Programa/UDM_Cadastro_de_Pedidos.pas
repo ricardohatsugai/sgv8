@@ -184,6 +184,7 @@ type
     FDQ_Itens_ReplicaCOD_DO_CLIENTE: TStringField;
     FDSchemaAdapter2: TFDSchemaAdapter;
     FDQ_PagamentoCOD_FAB: TIntegerField;
+    FDQ_ProdutosPRECOFIXO: TIntegerField;
   private
     { Private declarations }
   public
