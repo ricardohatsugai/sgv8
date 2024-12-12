@@ -185,6 +185,11 @@ type
     FDSchemaAdapter2: TFDSchemaAdapter;
     FDQ_PagamentoCOD_FAB: TIntegerField;
     FDQ_ProdutosPRECOFIXO: TIntegerField;
+    FDT_PrecoFixo: TFDTable;
+    FDT_PrecoFixoID: TIntegerField;
+    FDT_PrecoFixoSTATUS: TStringField;
+    FDQ_Produtosprecofixo_look: TStringField;
+    FDQ_Itensprecofixo_look: TStringField;
   private
     { Private declarations }
   public

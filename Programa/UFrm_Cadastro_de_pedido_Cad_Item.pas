@@ -56,6 +56,8 @@ type
     Edit_ValorCIPI: TEdit;
     Label1: TLabel;
     DBEdit_CodDoCliente: TDBEdit;
+    Label2: TLabel;
+    DBEdit_PrecoFixo: TDBEdit;
     procedure DBEdit_Desconto1Exit(Sender: TObject);
     procedure Btn_PesquisarClick(Sender: TObject);
     procedure DBGrid1DblClick(Sender: TObject);
@@ -199,7 +201,7 @@ DM_Cadastro_de_Pedidos.FDQ_ItensCODPRODUTO.Value := DM_Cadastro_de_Pedidos.FDQ_P
 DM_Cadastro_de_Pedidos.FDQ_ItensREFERENCIA.Value := DM_Cadastro_de_Pedidos.FDQ_ProdutosREFERENCIA.Value;
 DM_Cadastro_de_Pedidos.FDQ_ItensDESCRICAO.Value := DM_Cadastro_de_Pedidos.FDQ_ProdutosDESCRICAO.Value;
 DM_Cadastro_de_Pedidos.FDQ_ItensUNIDADE.Value := DM_Cadastro_de_Pedidos.FDQ_ProdutosUNIDADE.Value;
-if DM_Cadastro_de_Pedidos.FDQ_ProdutosPRECOFIXO.Value = 0 then begin
+if DM_Cadastro_de_Pedidos.FDQ_ProdutosPRECOFIXO.Value = 2 then begin // 1 = SIM, 2 = NAO
   DM_Cadastro_de_Pedidos.FDQ_ItensPRECO.Value := DM_Cadastro_de_Pedidos.FDQ_ProdutosPRECO.AsCurrency
     * DM_Cadastro_de_Pedidos.FDQ_ItensCOIFICIENTE.AsCurrency;
 end else if DM_Cadastro_de_Pedidos.FDQ_ProdutosPRECOFIXO.Value = 1 then begin
