@@ -59,6 +59,8 @@ type
     Btn_Cancelar: TBitBtn;
     Btn_CarregarFoto: TBitBtn;
     Btn_ApagarFoto: TBitBtn;
+    Label3: TLabel;
+    DBLookupCMB_PrecoFixo: TDBLookupComboBox;
     procedure Btn_CarregarFotoClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure Btn_SalvarClick(Sender: TObject);
@@ -160,6 +162,8 @@ end;
 procedure TFrm_Cadastro_de_Produtos.FormShow(Sender: TObject);
 begin
 DBEdit_Cod_fabricante.SetFocus;
+
+
 end;
 
 end.

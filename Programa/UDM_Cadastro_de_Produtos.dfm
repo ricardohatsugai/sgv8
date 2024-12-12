@@ -75,7 +75,8 @@ object DM_Cadastro_de_Produtos: TDM_Cadastro_de_Produtos
       '    produtos.icms,'
       '    produtos.comissao,'
       '    produtos.st_goias,'
-      '    produtos.st_brasilia'
+      '    produtos.st_brasilia,'
+      '    produtos.precofixo'
       'from produtos'
       'where '
       '   ('
@@ -276,6 +277,20 @@ object DM_Cadastro_de_Produtos: TDM_Cadastro_de_Produtos
       ProviderFlags = [pfInUpdate]
       BlobType = ftMemo
     end
+    object FDQ_Cad_ProdutoPRECOFIXO: TIntegerField
+      FieldName = 'PRECOFIXO'
+      Origin = 'PRECOFIXO'
+    end
+    object FDQ_Cad_Produtoprecofixo_look: TStringField
+      FieldKind = fkLookup
+      FieldName = 'precofixo_look'
+      LookupDataSet = FDT_PrecoFixo
+      LookupKeyFields = 'ID'
+      LookupResultField = 'STATUS'
+      KeyFields = 'PRECOFIXO'
+      Size = 15
+      Lookup = True
+    end
   end
   object DS_Cad_Produto: TDataSource
     DataSet = FDQ_Cad_Produto
@@ -389,6 +404,25 @@ object DM_Cadastro_de_Produtos: TDM_Cadastro_de_Produtos
       FieldName = 'RAZAOSOCIAL'
       Origin = 'RAZAOSOCIAL'
       Size = 80
+    end
+  end
+  object FDT_PrecoFixo: TFDTable
+    IndexFieldNames = 'ID'
+    Connection = DM_Principal.FDConnection1
+    UpdateOptions.UpdateTableName = 'PRECOFIXO'
+    TableName = 'PRECOFIXO'
+    Left = 512
+    Top = 72
+    object FDT_PrecoFixoID: TIntegerField
+      FieldName = 'ID'
+      Origin = 'ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDT_PrecoFixoSTATUS: TStringField
+      FieldName = 'STATUS'
+      Origin = 'STATUS'
+      Size = 15
     end
   end
 end

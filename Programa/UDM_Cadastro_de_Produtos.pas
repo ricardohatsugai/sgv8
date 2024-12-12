@@ -58,6 +58,11 @@ type
     FDQ_FabricaNOMEFANTASIA: TStringField;
     FDQ_FabricaRAZAOSOCIAL: TStringField;
     FDQ_Cad_ProdutoFABRICA_LOOKUP: TStringField;
+    FDQ_Cad_ProdutoPRECOFIXO: TIntegerField;
+    FDT_PrecoFixo: TFDTable;
+    FDT_PrecoFixoID: TIntegerField;
+    FDT_PrecoFixoSTATUS: TStringField;
+    FDQ_Cad_Produtoprecofixo_look: TStringField;
   private
     { Private declarations }
   public
