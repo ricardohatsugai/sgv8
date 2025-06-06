@@ -6,7 +6,7 @@ object DM_Principal: TDM_Principal
     Params.Strings = (
       'Database=C:\sgv8\Banco\banco.gdb'
       'User_Name=sysdba'
-      'Password=rik3500'
+      'Password=123'
       'CharacterSet=ISO8859_1'
       'DriverID=IB')
     Connected = True
