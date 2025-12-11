@@ -290,6 +290,14 @@ object Frm_Cadastro_de_Pedido_Cad_Item: TFrm_Cadastro_de_Pedido_Cad_Item
       Caption = 'C'#243'd. do Cliente'
       FocusControl = DBEdit_CodDoCliente
     end
+    object Label2: TLabel
+      Left = 993
+      Top = 48
+      Width = 50
+      Height = 13
+      Caption = 'Pre'#231'o Fixo'
+      FocusControl = DBEdit_PrecoFixo
+    end
     object DBEdit_Cod_Produto: TDBEdit
       Left = 65
       Top = 24
@@ -480,6 +488,16 @@ object Frm_Cadastro_de_Pedido_Cad_Item: TFrm_Cadastro_de_Pedido_Cad_Item
       DataSource = DM_Cadastro_de_Pedidos.DS_Itens
       TabOrder = 18
     end
+    object DBEdit_PrecoFixo: TDBEdit
+      Left = 993
+      Top = 64
+      Width = 72
+      Height = 21
+      DataField = 'precofixo_look'
+      DataSource = DM_Cadastro_de_Pedidos.DS_Itens
+      ReadOnly = True
+      TabOrder = 19
+    end
   end
   object Panel3: TPanel
     Left = 0
@@ -488,7 +506,6 @@ object Frm_Cadastro_de_Pedido_Cad_Item: TFrm_Cadastro_de_Pedido_Cad_Item
     Height = 79
     Align = alClient
     TabOrder = 2
-    ExplicitTop = 108
     object Bevel1: TBevel
       Left = 8
       Top = 6

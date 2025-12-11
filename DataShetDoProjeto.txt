@@ -1,0 +1,102 @@
+Trindade, 19 de Abril de 2017
+
+Sistema para Representantes Comerciais.
+
+- 19/04/2017 - Tela principal quase pronta.
+- Tela de Login;
+- Data Module principal e para login.
+
+Meta: Ainda falta:
+- Tela de listagem de Clientes
+- Feito Data Module do cadastro de Cidades
+- Feito a tela de cadastro de manutenção de Estados.
+- Feito a tela de cadastro e manutenção de Cidades.
+- Fazendo tela de cadastro de Clientes. Feito do DataModule do Cadastro de Clientes.
+  Cadastro de Clientes Completo.
+- Feito Tela de manutenção de alteração de cadastro de Clientes.
+
+- Backup feita até este ponto. Backup do dia 06 de Julho de 2017.
+
+- Feito a tela de cadastro de pagamentos.
+
+- Feito a tela de cadastro de Vendedores. Feito dataModule com componentes de acesso.
+
+- Feito a tela de cadastro de Transportadoras.
+
+- Feito a tela de cadastro de Usuários.
+
+- Feito a tela de cadastro de Representadas.
+
+- Feito a tela de cadastro de Produtos. Data Module desenvolvido, cadastro de produtos e manutenção de cadastro ok.
+
+- Fazer cadastro de pedido. Feito Data MOdule com os componentes de acesso ao banco de dados para listagem
+de pedidos.
+  Pesquisa por intervalo de datas na hora em que se chama a tela de listagem de pedidos, e pesqusia de pedidos por
+data, já está pronto.
+  Colocado od DBGrid com os botões de comando de banco de dados, 
+mas ainda não foram programados. Casas decimais formatadas com DisplayFormat já fortadas.
+  StringGrid adicioando e funcioando.
+  
+- Fazendo a tela de cadastro de pedidos. DataModule com componentes de acesso ao banco de dados para pedidos está quase pronto.
+Ainda falta fazer a tela de cadastro.
+
+* Na tela de consulta de pedidos, fazer um CheckBox em cada item de pedido, para informar se foi faturado ou não,
+e um campo adicional para informar o número da nota fiscal.
+
+- 15/10/2017 - Domingo.
+Cadastro de pedido terminado.
+
+- 11/11/2017 - (Concluido) Fazer o relatório de impressão de pedido.
+Criado do DataModule e sendo feito os campos lookups para as tabelas pedido e Itens.
+Compoente FastReport já implantado e sendo feito o desing.
+
+(02/01/2018) Relatório da cópia do pedido concretizada.
+
+- 03/01/2018 - (Concluido) Próximo passo é fazer uma relatório de pesquisa de "produto x quem comprou este produto". 
+Esta pesquisa o usuário dgitará um produto e o programa buscará em um intervalo de tempo, todos clientes 
+que compraram este produto, com quantidade e valor da época.
+
+- 05/01/2018 - (Concluido) No formulário de cadastro de pedido, icluir um botão para recalcular os preços e valores totais, com alteração
+de desconto.
+
+- 15/01/2018 - (Concluido) Pesquisa de Clientes por cidade.Com impressão de relatório.
+
+- 17/01/2018 - (Concluido) Fazer pesquisa de total de pedido de uma representada por intervalo de tempo e por representante.
+
+- 25/01/2018 - (Concluido) Tela de pesquisa de todos pedidos do cliente por representada no intervalo de duas datas.
+
+- 01/02/2018 - (Concluido) Tela de pesqusia de pedidos por número de pedido ou ordem de compra.
+
+- 02/02/2018 - (Concluido) Tela de pesquisa de pedidos por número de Ordem de Compra do Cliente.
+
+- 14/03/2018 - (Concluido) Alteração no banco de dados, na tabela ITENSPEDIDO, em que foi adicionado um campo integer 
+COD_FATURADO, e outro campo VARCHAR(NOMES) com o nomo NOTAFISCAL. Estes campos serão se ter o melhor controle dos produtos 
+quer realmente foram entregues ao cliente. Acrescentar também a Data de faturamento.
+
+- 15/05/2018 - (Concluido) Tela de cadastro de Cidades.
+
+- 28/07/2018 - (A Fazer) Implementar o sistema com o cálculo automático de comissões. Tarefa esta que terei que programar uma implementação no banco de dados, mais no delphi. Após esta implementação, criar um relatório destas comissões.
+
+- 05/08/2018 - (Concluido) Mascara no cgc da tela de pesquisa CLIENTE X FABRICA X ENTRE DATAS X SOMA TOTAL DO PERIODO.
+
+- 14/08/2018 - (Concluido) Incluido na tabela ITENS_DE_PEDIDO o campo COD_DO_CLIENTE, para aparecer na cópia do pedido o código do sistema do Cliente. Versãso final 1.0.1.43;
+
+- 17/12/2019 - (À fazer) Desenvolver uma tela de cadastramento de campanhas de metas e rebate de metas.
+
+- 14/09/2020 - (À fazer) Na tela de alteração de pedidos, o campo de informar o código de produto do cliente na tela de alteração de produtos, está acusando que a tabela de prod_clie_cliente está desabilitado. Vamos tentar consertar.
+  Correção feita, e alteração do código de produtos do cliente, efetuado com sucesso.
+  
+- 22/10/2022 - (À fazer) Pesquisa de clientes que mais compraram pelos parâmetros:
+	- datas(Data inicial e data final);
+	- Representada;
+	
+- 08/12/2024 - (Concluído) Alteração na tabela PRODUTOS no banco de dados para inclusão de um campo PrecoFixo do tipo Inteiro, que será uma flag. 0=não 1=sim.
+	Arquivos afetados:	- 	DataShetDoProjeto.txt
+							Programa/UDM_Cadastro_de_Pedidos.dfm
+							Programa/UDM_Cadastro_de_Pedidos.pas
+							Programa/UFrm_Cadastro_de_pedido_Cad_Item.dfm
+							Programa/UFrm_Cadastro_de_pedido_Cad_Item.pas
+							Programa/sgv8.dproj
+							Programa/sgv8.res
+							
+- 08/12/2024 - (À fazer) Alteração na tela de cadastro de produtos, para cadastrar e alterar a flat "Preço fixo".

@@ -31,7 +31,6 @@ object Frm_Cadastro_de_Produtos: TFrm_Cadastro_de_Produtos
       Height = 527
       Align = alClient
       ExplicitLeft = 2
-      ExplicitTop = 0
     end
     object Lbl_Codigo: TLabel
       Left = 16
@@ -191,12 +190,19 @@ object Frm_Cadastro_de_Produtos: TFrm_Cadastro_de_Produtos
       FocusControl = DBMemo1
     end
     object Label2: TLabel
-      Left = 663
-      Top = 88
+      Left = 1206
+      Top = 125
       Width = 22
       Height = 13
       Caption = 'Foto'
       FocusControl = DBImage1
+    end
+    object Label3: TLabel
+      Left = 615
+      Top = 88
+      Width = 50
+      Height = 13
+      Caption = 'Pre'#231'o Fixo'
     end
     object DBEdit_Codigo: TDBEdit
       Left = 16
@@ -379,7 +385,7 @@ object Frm_Cadastro_de_Produtos: TFrm_Cadastro_de_Produtos
     end
     object DBMemo1: TDBMemo
       Left = 16
-      Top = 144
+      Top = 145
       Width = 625
       Height = 384
       DataField = 'OBS'
@@ -389,13 +395,22 @@ object Frm_Cadastro_de_Produtos: TFrm_Cadastro_de_Produtos
     end
     object DBImage1: TDBImage
       Left = 663
-      Top = 104
+      Top = 144
       Width = 570
-      Height = 424
+      Height = 384
       DataField = 'FOTO'
       DataSource = DM_Cadastro_de_Produtos.DS_Cad_Produto
       Stretch = True
       TabOrder = 20
+    end
+    object DBLookupCMB_PrecoFixo: TDBLookupComboBox
+      Left = 615
+      Top = 104
+      Width = 154
+      Height = 21
+      DataField = 'precofixo_look'
+      DataSource = DM_Cadastro_de_Produtos.DS_Cad_Produto
+      TabOrder = 21
     end
   end
   object Panel2: TPanel

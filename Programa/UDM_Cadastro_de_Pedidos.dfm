@@ -474,6 +474,16 @@ object DM_Cadastro_de_Pedidos: TDM_Cadastro_de_Pedidos
       Origin = 'COD_DO_CLIENTE'
       Size = 400
     end
+    object FDQ_Itensprecofixo_look: TStringField
+      FieldKind = fkLookup
+      FieldName = 'precofixo_look'
+      LookupDataSet = FDQ_Produtos
+      LookupKeyFields = 'CODIGO'
+      LookupResultField = 'precofixo_look'
+      KeyFields = 'CODPRODUTO'
+      Size = 15
+      Lookup = True
+    end
   end
   object DS_Pedido: TDataSource
     DataSet = FDQ_Pedido
@@ -666,7 +676,8 @@ object DM_Cadastro_de_Pedidos: TDM_Cadastro_de_Pedidos
       '    produtos.icms,'
       '    produtos.st_goias,'
       '    produtos.st_brasilia,'
-      '    produtos.comissao'
+      '    produtos.comissao,'
+      '    produtos.precofixo'
       'from produtos'
       'where '
       '   ('
@@ -789,6 +800,20 @@ object DM_Cadastro_de_Pedidos: TDM_Cadastro_de_Pedidos
       FieldName = 'COMISSAO'
       Origin = 'COMISSAO'
       Precision = 18
+    end
+    object FDQ_ProdutosPRECOFIXO: TIntegerField
+      FieldName = 'PRECOFIXO'
+      Origin = 'PRECOFIXO'
+    end
+    object FDQ_Produtosprecofixo_look: TStringField
+      FieldKind = fkLookup
+      FieldName = 'precofixo_look'
+      LookupDataSet = FDT_PrecoFixo
+      LookupKeyFields = 'ID'
+      LookupResultField = 'STATUS'
+      KeyFields = 'PRECOFIXO'
+      Size = 15
+      Lookup = True
     end
   end
   object DS_Produtos: TDataSource
@@ -1184,5 +1209,24 @@ object DM_Cadastro_de_Pedidos: TDM_Cadastro_de_Pedidos
   object FDSchemaAdapter2: TFDSchemaAdapter
     Left = 136
     Top = 400
+  end
+  object FDT_PrecoFixo: TFDTable
+    IndexFieldNames = 'ID'
+    Connection = DM_Principal.FDConnection1
+    UpdateOptions.UpdateTableName = 'PRECOFIXO'
+    TableName = 'PRECOFIXO'
+    Left = 624
+    Top = 80
+    object FDT_PrecoFixoID: TIntegerField
+      FieldName = 'ID'
+      Origin = 'ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDT_PrecoFixoSTATUS: TStringField
+      FieldName = 'STATUS'
+      Origin = 'STATUS'
+      Size = 15
+    end
   end
 end
