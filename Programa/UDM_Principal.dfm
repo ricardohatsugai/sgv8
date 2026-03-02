@@ -4,12 +4,10 @@ object DM_Principal: TDM_Principal
   Width = 729
   object FDConnection1: TFDConnection
     Params.Strings = (
-      'Database=C:\sgv8\Banco\banco.gdb'
+      'Database=C:\sgv8\Banco\BANCO.GDB'
       'User_Name=sysdba'
-      'Password=123'
-      'CharacterSet=ISO8859_1'
-      'DriverID=IB')
-    Connected = True
+      'Password=rik3500'
+      'DriverID=FB')
     LoginPrompt = False
     Transaction = FDTransaction1
     Left = 56
