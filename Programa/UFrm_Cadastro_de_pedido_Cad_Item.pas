@@ -214,7 +214,10 @@ DM_Cadastro_de_Pedidos.FDQ_ItensICMS.Value := DM_Cadastro_de_Pedidos.FDQ_Produto
 DM_Cadastro_de_Pedidos.FDQ_ItensCTS.Value := DM_Cadastro_de_Pedidos.FDQ_ProdutosCTS.Value;
 Edit_ValorCIPI.Text := FormatCurr('R$ ###,##0.00', DM_Cadastro_de_Pedidos.FDQ_ItensPRECO.AsCurrency +
   (DM_Cadastro_de_Pedidos.FDQ_ItensPRECO.AsCurrency * (DM_Cadastro_de_Pedidos.FDQ_ItensIPI.AsCurrency / 100)));
-DM_Cadastro_de_Pedidos.FDQ_ItensQUANT.Value := DM_Cadastro_de_Pedidos.FDQ_ProdutosEMBAL_MULTIPLO.Value;
+
+// Se o campo quantidade estiver vazio, este comando não será executado.
+if DBEdit_Quantidade.Text = '' then
+  DM_Cadastro_de_Pedidos.FDQ_ItensQUANT.Value := DM_Cadastro_de_Pedidos.FDQ_ProdutosEMBAL_MULTIPLO.Value;
 
   {Passa o código do produto para o parametro ('CODPROD') da tabela COD_PRODCLIENTE}
 if DM_Cadastro_de_Pedidos.FDQ_CodDoCliente.Active = True then
