@@ -6,7 +6,7 @@ object DM_Principal: TDM_Principal
     Params.Strings = (
       'Database=C:\sgv8\Banco\BANCO.GDB'
       'User_Name=sysdba'
-      'Password=rik3500'
+      'Password=jaba'
       'DriverID=FB')
     LoginPrompt = False
     Transaction = FDTransaction1
